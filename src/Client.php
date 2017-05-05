@@ -135,8 +135,10 @@ class Client
         $this->serviceClient = new GuzzleClient(
                 $client,
                 $this->description,
+                null,
+                null,
+                null,
                 array(
-                    'emitter'  => $this->baseClient->getEmitter(),
                     'defaults' => $this->settings,
                 )
             );
