@@ -50,6 +50,7 @@ return array(
         "customer-group",
         "customer-saved-search",
         "discount",
+        "draft-order",
         "event",
         "fulfillment",
         "fulfillment-service",
