@@ -25,6 +25,11 @@ return array(
             "summary" => "Retrieve a list of all Products",
             "responseModel" => "defaultJsonResponse",
             "parameters" => array(
+                "ids" => array(
+                    "type" => "string",
+                    "location" => "query",
+                    "description" => "Shopify order ids to specifically fetch",
+                ),
                 "limit" => array(
                     "type" => "integer",
                     "location" => "query",
