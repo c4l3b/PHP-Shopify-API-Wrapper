@@ -31,7 +31,12 @@ return array(
                     "location" => "uri",
                     "description" => "The ID of the resource.",
                     "required" => true
-                )
+                ),
+                "namespace" => array(
+                    "type" => "string",
+                    "location" => "query",
+                    "description" => "Show metafields with given namespace"
+                ),
             )
         ),
 
@@ -76,7 +81,7 @@ return array(
                     "location" => "query",
                     "description" => "Show metafields last updated before date (format: 2008-12-31 03:00)"
                 ),
-                "namepace" => array(
+                "namespace" => array(
                     "type" => "string",
                     "location" => "query",
                     "description" => "Show metafields with given namespace"
