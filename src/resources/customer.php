@@ -23,7 +23,24 @@ return array(
             "httpMethod" => "GET",
             "uri" => "/admin/customers.json",
             "summary" => "Retrieve all customers of a shop",
-            "responseModel" => "defaultJsonResponse"
+            "responseModel" => "defaultJsonResponse",
+            "parameters" => array(
+                "page" => array(
+                    "type" => "number",
+                    "location" => "query",
+                    "description" => "Page to show"
+                ),
+                "limit" => array(
+                    "type" => "number",
+                    "location" => "query",
+                    "description" => "Amount of results"
+                ),
+                "fields" => array(
+                    "type" => "string",
+                    "location" => "query",
+                    "description" => "comma-separated list of fields to include in the response"
+                ),
+            ),
         ),
 
         /**
@@ -55,28 +72,28 @@ return array(
                     "description" => "Field and direction to order results by (default: last_order_date DESC)"
                 ),
                 "query" => array(
-	                "type" => "string",
-	                "location" => "query",
-	                "description" => "Text to search customers"
+                    "type" => "string",
+                    "location" => "query",
+                    "description" => "Text to search customers"
                 ),
                 "page" => array(
-	                "type" => "number",
-	                "location" => "query",
-	                "description" => "Page to show"
+                    "type" => "number",
+                    "location" => "query",
+                    "description" => "Page to show"
                 ),
                 "limit" => array(
-	                "type" => "number",
-	                "location" => "query",
-	                "description" => "Amount of results"
+                    "type" => "number",
+                    "location" => "query",
+                    "description" => "Amount of results"
                 ),
                 "fields" => array(
-	                "type" => "string",
-	                "location" => "query",
-	                "description" => "comma-separated list of fields to include in the response"
-                )	
+                    "type" => "string",
+                    "location" => "query",
+                    "description" => "comma-separated list of fields to include in the response"
+                )
             )
         ),
-        
+
 
         /**
          *    getCustomer() method
@@ -345,11 +362,11 @@ return array(
                         )
                     )
                 )
-                
+
 
             )
         ),
-        
+
 
         /**
          *    deleteCustomer() method
@@ -382,7 +399,5 @@ return array(
     |
     */
 
-    "models" => array(
-
-    ),
+    "models" => array(),
 );
