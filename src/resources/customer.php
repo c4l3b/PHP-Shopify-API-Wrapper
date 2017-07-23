@@ -25,7 +25,19 @@ return array(
             "summary" => "Retrieve all customers of a shop",
             "responseModel" => "defaultJsonResponse"
         ),
-        
+
+        /**
+         *    getCustomerCount() method
+         *
+         *    reference: http://docs.shopify.com/api/customer
+         */
+        "getCustomerCount" => array(
+            "httpMethod" => "GET",
+            "uri" => "/admin/customers/count.json",
+            "summary" => "Retrieve a count of all customers",
+            "responseModel" => "defaultJsonResponse"
+        ),
+
         /**
          *    getCustomerSearch() method
          *
