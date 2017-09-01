@@ -184,7 +184,7 @@ return array(
          *    reference: http://docs.shopify.com/api/product_image
          */
         "updateProductImage" => array(
-            "httpMethod" => "POST",
+            "httpMethod" => "PUT",
             "uri" => "/admin/products/{product_id}/images/{id}.json",
             "summary" => "Update a product image.",
             "responseModel" => "defaultJsonResponse",
