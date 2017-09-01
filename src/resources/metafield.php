@@ -14,6 +14,21 @@ return array(
 
     "operations" => array(
 
+        "getResourceMetafields" => array(
+            "httpMethod" => "GET",
+            "uri" => "/admin/metafields.json",
+            "summary" => "Get metafields that belong to a resource",
+            "responseModel" => "defaultJsonResponse",
+            "parameters" => array(
+                "metafield" => array(
+                    "type" => "array",
+                    "location" => "query",
+                    "description" => "The metafield parameters. Valid array keys are owner_id and owner_resource",
+                    "required" => true,
+                ),
+            ),
+        ),
+
         "getMetafieldsFor" => array(
             "httpMethod" => "GET",
             "uri" => "/admin/{resource}/{id}/metafields.json",
